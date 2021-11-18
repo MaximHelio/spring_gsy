@@ -1,0 +1,44 @@
+테이블
+	회원	TB_MBR
+			ID	VARCHAR(100)
+			PW	VARCHAR(500)
+			NM	VARCHAR(100)
+			ADDR	VARCHAR(1000)
+			DETAIL_ADDR	VARCHAR(1000)
+			CONTACT	VARCHAR(100)
+
+	상품	TB_PRD
+			PD_NO 	INT	PRIMARY KEY	AUTO_INCREMENT (자동 증가)
+			CTG_NM	VARCHAR(100)
+			PD_NM	VARCHAR(500)
+			THUMB	VARCHAR(1000)
+			CONTENTS (본문)	TEXT
+			PRICE	INT
+
+	주문	TB_ORD
+			주문번호
+			구매자ID
+			상품번호
+			주문일시
+			취소여부	CANCEL_YN (default N)
+			취소일시	
+
+
+
+1. 테이블 2-3개 만들어오기
+	
+CREATE TABLE...
+2. 벤치마킹 사이트처럼 헤더/바디/푸터 나눠보기
+https://www.pacey.co.kr/goods/goods_list.php?cateCd=011
+	header.html
+	footer.html
+		--> html/css
+
+
+
+
+
+
+[다음에 할거]
+	index.html 에서는 이 두개를 불러와야 하는데 그건 다음에 같이
+	DB 연동해서 상품 뿌려주기

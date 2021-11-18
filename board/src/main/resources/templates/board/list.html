@@ -1,0 +1,40 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>게시글 목록</h1>
+	
+	<form action="/board/list" method="get">
+		<a href="/board/insert">글쓰기</a>
+		<input type="text" name="keyword" />
+		<input type="submit" value="검색" />
+	</form>
+	
+	<table border="1">
+		<thead>
+			<tr>
+				<th align="center" width="80">글번호</th>
+				<th align="left" width="320">제목</th>
+				<th align="center" width="100">작성자</th>
+				<th align="center" width="200">등록일자</th>
+				<th align="center" width="200">수정일자</th>
+			</tr>		
+		</thead>
+		<tbody>
+			<tr th:each=" board : ${list}">
+				<td th:text="${board.boardNo}"></td>
+				<td>
+				<!-- thymleaf 표현식에서 혼합해서 쓰려면 양옆에 묶어줘야 -->
+					<a th:href="|/board/read?boardNo=${board.boardNo}|"
+						th:text="${board.title}"></a>
+				</td>
+				<td th:text="${board.writer}"></td>
+				<td th:text="${ #dates.format(board.regDate, 'yyyy-MM-dd HH:mm:ss') }"></td>
+				<td th:text="${ #dates.format(board.updDate, 'yyyy-MM-dd HH:mm:ss') }"></td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>

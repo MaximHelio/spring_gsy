@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>글쓰기</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="/js/board.js"></script>
+</head>
+<body>
+	<h1>글쓰기</h1>
+	<form action="/board/insert" method="post" id="board" enctype="multipart/form-data">
+		<table>
+			<tr>
+				<td>제목</td>
+				<td>
+					<input type="text" name="title" placeholder="제목" />
+				</td>
+			</tr>
+			<tr>
+				<td>작성자</td>
+				<td>
+					<input type="text" name="writer" placeholder="작성자" />
+				</td>
+			</tr>
+			<tr>
+				<td>제목</td>
+				<td>
+					<textarea rows="20" cols="60" name="content"></textarea>
+				</td>
+			</tr>
+			<!-- 파일 업로드 -->
+			<tr>
+				<td>파일</td>
+				<td>
+					<input type="file" name="file" multiple />
+				</td>
+			</tr>
+		</table>
+	</form>
+	<div>
+		<button type="button" id="btnInsert">등록</button>
+		<button type="button" id="btnList">목록</button>
+	</div>
+</body>
+</html>

@@ -1,0 +1,414 @@
+
+C:\Users\pc>cd ../
+
+C:\Users>cd ..\
+
+C:\>cd Users
+
+C:\Users>cd pc
+
+C:\Users\pc>ipconfig
+
+Windows IP 구성
+
+
+이더넷 어댑터 이더넷:
+
+   연결별 DNS 접미사. . . . : skbroadband
+   링크-로컬 IPv6 주소 . . . . : fe80::a04b:bb07:c0e7:9901%12
+   IPv4 주소 . . . . . . . . . : 211.176.176.200
+   서브넷 마스크 . . . . . . . : 255.255.255.192
+   기본 게이트웨이 . . . . . . : 211.176.176.193
+
+이더넷 어댑터 Bluetooth 네트워크 연결:
+
+   미디어 상태 . . . . . . . . : 미디어 연결 끊김
+   연결별 DNS 접미사. . . . :
+
+C:\Users\pc>ipconfig /?
+
+사용법:
+    ipconfig [/allcompartments] [/? | /all |
+                                 /renew [adapter] | /release [adapter] |
+                                 /renew6 [adapter] | /release6 [adapter] |
+                                 /flushdns | /displaydns | /registerdns |
+                                 /showclassid adapter |
+                                 /setclassid adapter [classid] ]
+                                 /showclassid6 adapter |
+                                 /setclassid6 adapter [classid] ]
+
+설명:
+    adapter              연결 이름
+                       (와일드카드 문자 * 및 ?를 사용할 수 있음, 예제 참조)
+
+    옵션:
+       /?               이 도움말 메시지를 표시합니다.
+       /all             전체 구성 정보를 표시합니다.
+       /release         지정된 어댑터에 대한 IPv4 주소를 해제합니다.
+       /release6        지정된 어댑터에 대한 IPv6 주소를 해제합니다.
+       /renew           지정된 어댑터에 대한 IPv4 주소를 갱신합니다.
+       /renew6          지정된 어댑터에 대한 IPv6 주소를 갱신합니다.
+       /flushdns        DNS 확인 프로그램 캐시를 제거합니다.
+       /registerdns     모든 DHCP 임대를 새로 고치고 DNS 이름을 다시 등록합니다.
+       /displaydns      DNS 확인 프로그램 캐시 내용을 표시합니다.
+       /showclassid     어댑터에 대해 허용된 모든 DHCP 클래스 ID를 표시합니다.
+       /setclassid      DHCP 클래스 ID를 수정합니다.
+       /showclassid6    adapter에 대해 허용된 IPv6 DHCP 클래스 ID를 모두 표시합니다.
+       /setclassid6     IPv6 DHCP 클래스 ID를 수정합니다.
+
+
+기본적으로 TCP/IP에 바인딩된 각 어댑터에 대한 IP 주소,
+서브넷 마스크 및 기본 게이트웨이만 표시합니다.
+
+릴리스 및 갱신은 지정된 어댑터 이름이 없으면 TCP/IP에 바인딩된
+모든 어댑터에 대한 IP 주소 임대를 해제하거나 갱신합니다.
+
+Setclassid 및 Setclassid6에 지정된 ClassId가 없으면 ClassId가 제거됩니다.
+
+예제:
+    > ipconfig                       ... 정보 표시
+    > ipconfig /all                  ... 자세한 정보 표시
+    > ipconfig /renew                ... 모든 어댑터 갱신
+    > ipconfig /renew EL*            ... EL로 시작되는 이름을 가진
+                                         모든 연결 갱신
+    > ipconfig /release *Con*        ... 모든 일치하는 연결 해제
+                                         예: "Wired Ethernet Connection 1" or
+                                             "Wired Ethernet Connection 2"
+    > ipconfig /allcompartments      ... 모든 컴파트먼트에 대한
+                                         정보 표시
+    > ipconfig /allcompartments /all ... 모든 컴파트먼트에 대한
+                                         자세한 정보 표시
+
+C:\Users\pc>ipconfig all
+
+오류: 인식할 수 없거나 불완전한 명령줄입니다.
+
+사용법:
+    ipconfig [/allcompartments] [/? | /all |
+                                 /renew [adapter] | /release [adapter] |
+                                 /renew6 [adapter] | /release6 [adapter] |
+                                 /flushdns | /displaydns | /registerdns |
+                                 /showclassid adapter |
+                                 /setclassid adapter [classid] ]
+                                 /showclassid6 adapter |
+                                 /setclassid6 adapter [classid] ]
+
+설명:
+    adapter              연결 이름
+                       (와일드카드 문자 * 및 ?를 사용할 수 있음, 예제 참조)
+
+    옵션:
+       /?               이 도움말 메시지를 표시합니다.
+       /all             전체 구성 정보를 표시합니다.
+       /release         지정된 어댑터에 대한 IPv4 주소를 해제합니다.
+       /release6        지정된 어댑터에 대한 IPv6 주소를 해제합니다.
+       /renew           지정된 어댑터에 대한 IPv4 주소를 갱신합니다.
+       /renew6          지정된 어댑터에 대한 IPv6 주소를 갱신합니다.
+       /flushdns        DNS 확인 프로그램 캐시를 제거합니다.
+       /registerdns     모든 DHCP 임대를 새로 고치고 DNS 이름을 다시 등록합니다.
+       /displaydns      DNS 확인 프로그램 캐시 내용을 표시합니다.
+       /showclassid     어댑터에 대해 허용된 모든 DHCP 클래스 ID를 표시합니다.
+       /setclassid      DHCP 클래스 ID를 수정합니다.
+       /showclassid6    adapter에 대해 허용된 IPv6 DHCP 클래스 ID를 모두 표시합니다.
+       /setclassid6     IPv6 DHCP 클래스 ID를 수정합니다.
+
+
+기본적으로 TCP/IP에 바인딩된 각 어댑터에 대한 IP 주소,
+서브넷 마스크 및 기본 게이트웨이만 표시합니다.
+
+릴리스 및 갱신은 지정된 어댑터 이름이 없으면 TCP/IP에 바인딩된
+모든 어댑터에 대한 IP 주소 임대를 해제하거나 갱신합니다.
+
+Setclassid 및 Setclassid6에 지정된 ClassId가 없으면 ClassId가 제거됩니다.
+
+예제:
+    > ipconfig                       ... 정보 표시
+    > ipconfig /all                  ... 자세한 정보 표시
+    > ipconfig /renew                ... 모든 어댑터 갱신
+    > ipconfig /renew EL*            ... EL로 시작되는 이름을 가진
+                                         모든 연결 갱신
+    > ipconfig /release *Con*        ... 모든 일치하는 연결 해제
+                                         예: "Wired Ethernet Connection 1" or
+                                             "Wired Ethernet Connection 2"
+    > ipconfig /allcompartments      ... 모든 컴파트먼트에 대한
+                                         정보 표시
+    > ipconfig /allcompartments /all ... 모든 컴파트먼트에 대한
+                                         자세한 정보 표시
+
+C:\Users\pc>ipconfig /all
+
+Windows IP 구성
+
+   호스트 이름 . . . . . . . . : DESKTOP-4ASBMIC
+   주 DNS 접미사 . . . . . . . :
+   노드 유형 . . . . . . . . . : 혼성
+   IP 라우팅 사용. . . . . . . : 아니요
+   WINS 프록시 사용. . . . . . : 아니요
+   DNS 접미사 검색 목록. . . . : skbroadband
+
+이더넷 어댑터 이더넷:
+
+   연결별 DNS 접미사. . . . : skbroadband
+   설명. . . . . . . . . . . . : Realtek PCIe GbE Family Controller
+   물리적 주소 . . . . . . . . : 30-0E-D5-14-AA-34
+   DHCP 사용 . . . . . . . . . : 예
+   자동 구성 사용. . . . . . . : 예
+   링크-로컬 IPv6 주소 . . . . : fe80::a04b:bb07:c0e7:9901%12(기본 설정)
+   IPv4 주소 . . . . . . . . . : 211.176.176.200(기본 설정)
+   서브넷 마스크 . . . . . . . : 255.255.255.192
+   임대 시작 날짜. . . . . . . : 2021년 8월 17일 화요일 오전 9:15:46
+   임대 만료 날짜. . . . . . . : 2021년 8월 17일 화요일 오후 3:59:59
+   기본 게이트웨이 . . . . . . : 211.176.176.193
+   DHCP 서버 . . . . . . . . . : 172.23.238.193
+   DHCPv6 IAID . . . . . . . . : 103812821
+   DHCPv6 클라이언트 DUID. . . : 00-01-00-01-28-A3-BA-B2-30-0E-D5-14-AA-34
+   DNS 서버. . . . . . . . . . : 210.220.163.82
+                                 219.250.36.130
+   Tcpip를 통한 NetBIOS. . . . : 사용
+
+이더넷 어댑터 Bluetooth 네트워크 연결:
+
+   미디어 상태 . . . . . . . . : 미디어 연결 끊김
+   연결별 DNS 접미사. . . . :
+   설명. . . . . . . . . . . . : Bluetooth Device (Personal Area Network)
+   물리적 주소 . . . . . . . . : 00-1A-7D-DA-71-13
+   DHCP 사용 . . . . . . . . . : 예
+   자동 구성 사용. . . . . . . : 예
+
+C:\Users\pc>ping
+
+사용법: ping [-t] [-a] [-n count] [-l size] [-f] [-i TTL] [-v TOS]
+            [-r count] [-s count] [[-j host-list] | [-k host-list]]
+            [-w timeout] [-R] [-S srcaddr] [-c compartment] [-p]
+            [-4] [-6] target_name
+
+옵션:
+    -t             중지될 때까지 지정한 호스트를 ping합니다.
+                   통계를 보고 계속하려면 <Ctrl+Break>를 입력합니다.
+                   중지하려면 <Ctrl+C>를 입력합니다.
+    -a             주소를 호스트 이름으로 확인합니다.
+    -n count       보낼 에코 요청의 수입니다.
+    -l size        송신 버퍼 크기입니다.
+    -f             패킷에 조각화 안 함 플래그를 설정(IPv4에만 해당)합니다.
+    -i TTL          Time To Live
+    -v TOS         서비스 종류(IPv4에만 해당. 이 설정은 더
+                   이상 사용되지 않으며 IP 헤더의 서비스 종류 필드에 영향을
+                   주지 않음)입니다.
+    -r count       count 홉의 경로를 기록합니다(IPv4에만 해당).
+    -s count       count 홉의 타임스탬프(IPv4에만 해당)입니다.
+    -j host-list   host-list에 따라 원본 라우팅을 완화합니다(IPv4에만 해당).
+    -k host-list   host-list에 따라 원본 라우팅을 강화합니다(IPv4에만 해당).
+    -w timeout     각 응답의 대기 시간 제한(밀리초)입니다.
+    -R             라우팅 헤더를 사용하여 역방향 라우팅도
+                   테스트합니다(IPv6에만 해당).
+                   RFC 5095에 따라 이 라우팅 헤더는 사용되지
+                   않습니다. 이 헤더를 사용할 경우 일부 시스템에서 에코
+                   요청이 삭제될 수 있습니다.
+    -S srcaddr     사용할 원본 주소입니다.
+    -c compartment 라우팅 컴파트먼트 ID입니다.
+    -p             Hyper-V 네트워크 가상화 공급자 주소에 대해 ping을 수행합니다.
+    -4             IPv4를 사용합니다.
+    -6             IPv6을 사용합니다.
+
+
+C:\Users\pc>ping www.virtualbox.org
+
+Ping www.virtualbox.org [137.254.60.32] 32바이트 데이터 사용:
+요청 시간이 만료되었습니다.
+요청 시간이 만료되었습니다.
+요청 시간이 만료되었습니다.
+요청 시간이 만료되었습니다.
+
+137.254.60.32에 대한 Ping 통계:
+    패킷: 보냄 = 4, 받음 = 0, 손실 = 4 (100% 손실),
+
+C:\Users\pc>ping www.yahoo.com
+
+Ping new-fp-shed.wg1.b.yahoo.com [202.165.107.50] 32바이트 데이터 사용:
+202.165.107.50의 응답: 바이트=32 시간=88ms TTL=45
+202.165.107.50의 응답: 바이트=32 시간=88ms TTL=45
+202.165.107.50의 응답: 바이트=32 시간=88ms TTL=45
+202.165.107.50의 응답: 바이트=32 시간=88ms TTL=45
+
+202.165.107.50에 대한 Ping 통계:
+    패킷: 보냄 = 4, 받음 = 4, 손실 = 0 (0% 손실),
+왕복 시간(밀리초):
+    최소 = 88ms, 최대 = 88ms, 평균 = 88ms
+
+C:\Users\pc>help copy
+하나 이상의 파일을 다른 위치로 복사합니다.
+
+COPY [/D] [/V] [/N] [/Y | /-Y] [/Z] [/L] [/A | /B ] 원본 [/A | /B]
+     [+ 원본 [/A | /B] [+ ...]] [대상 [/A | /B]]
+
+  원본         복사할 파일을 지정합니다.
+  /A           ASCII 텍스트 파일임을 나타냅니다.
+  /B           이진 파일임을 나타냅니다.
+  /D           대상 파일이 암호화 없이 만들어지도록 허용합니다.
+  대상         새 파일에 대한 디렉터리와/또는 파일 이름을 지정합니다.
+  /V           새 파일이 올바르게 기록되었는지 확인합니다.
+  /N           8.3 이름이 아닌 파일을 복사할 때, 짧은 파일 이름이 있으면
+               그 이름을 사용합니다.
+  /Y           이미 있는 대상 파일을 덮어쓸지를
+               확인하지 않습니다.
+  /-Y          이미 있는 대상 파일을 덮어쓸지
+               확인하기 위해 묻습니다.
+  /Z           다시 시작 모드에 있는 네트워크 파일을 복사합니다.
+  /L           원본이 기호화된 링크인 경우 원본 링크가 가리키는 실제 파일 대신               링크를 대상에 복사합니다.
+
+/Y 스위치는 COPYCMD 환경 변수에 이미 지정되어 있습니다.
+이 설정은 명령줄의 /-Y 스위치에 의해 무시될 수 있습니다. COPY 명령을 일괄 처리 스크립트에서 실행하지 않으면
+기본적으로 이미 있는 파일을
+덮어쓸지를 묻습니다.
+
+파일을 한 파일에 붙여 넣으려면 원본에 여러 파일을 지정하고
+(대표 문자 또는 파일1+파일2+파일3 포맷을 사용하여) 대상에는 한 파일을 지정합니 다.
+
+C:\Users\pc>dir
+ C 드라이브의 볼륨에는 이름이 없습니다.
+ 볼륨 일련 번호: F481-FB64
+
+ C:\Users\pc 디렉터리
+
+2021-08-17  오후 03:13    <DIR>          .
+2021-08-17  오후 03:13    <DIR>          ..
+2021-08-17  오전 01:19            11,854 .bash_history
+2021-08-11  오후 01:55    <DIR>          .cache
+2021-08-16  오전 01:27    <DIR>          .config
+2021-08-11  오후 01:55    <DIR>          .eclipse
+2021-08-13  오전 01:29                40 .gitconfig
+2021-08-10  오후 10:08    <DIR>          .jupyter
+2021-08-16  오전 01:27                 0 .node_repl_history
+2021-08-11  오후 02:28    <DIR>          .p2
+2021-08-12  오전 09:35    <DIR>          .sts4
+2021-08-13  오전 10:34    <DIR>          .tooling
+2021-08-10  오후 09:55    <DIR>          .vscode
+2021-08-11  오전 02:00    <DIR>          3D Objects
+2021-08-11  오전 02:00    <DIR>          Contacts
+2021-08-13  오전 11:31    <DIR>          Documents
+2021-08-17  오전 01:23    <DIR>          Downloads
+2021-08-11  오후 02:29    <DIR>          eclipse-workspace
+2021-08-11  오전 02:00    <DIR>          Favorites
+2021-08-13  오전 10:34    <DIR>          hsperfdata_pc
+2021-08-17  오후 03:11           246,770 java.txt
+2021-08-12  오전 09:58               864 lab15.jar
+2021-08-12  오전 10:08           477,606 lab16.jar
+2021-08-12  오전 10:08    <DIR>          lab16_lib
+2021-08-11  오전 02:00    <DIR>          Links
+2021-08-11  오전 02:00    <DIR>          Music
+2021-08-17  오전 09:16    <DIR>          OneDrive
+2021-08-11  오전 02:00    <DIR>          Saved Games
+2021-08-11  오전 02:00    <DIR>          Searches
+2021-08-17  오후 03:13    <DIR>          test
+2021-08-17  오후 03:13    <DIR>          test1
+2021-08-17  오후 03:13    <DIR>          test2
+2021-08-17  오후 03:13    <DIR>          test3
+2021-08-11  오후 03:52    <DIR>          Videos
+               6개 파일             737,134 바이트
+              28개 디렉터리  51,805,143,040 바이트 남음
+
+C:\Users\pc>copy java.txt class.txt
+        1개 파일이 복사되었습니다.
+
+C:\Users\pc>dir
+ C 드라이브의 볼륨에는 이름이 없습니다.
+ 볼륨 일련 번호: F481-FB64
+
+ C:\Users\pc 디렉터리
+
+2021-08-17  오후 03:32    <DIR>          .
+2021-08-17  오후 03:32    <DIR>          ..
+2021-08-17  오전 01:19            11,854 .bash_history
+2021-08-11  오후 01:55    <DIR>          .cache
+2021-08-16  오전 01:27    <DIR>          .config
+2021-08-11  오후 01:55    <DIR>          .eclipse
+2021-08-13  오전 01:29                40 .gitconfig
+2021-08-10  오후 10:08    <DIR>          .jupyter
+2021-08-16  오전 01:27                 0 .node_repl_history
+2021-08-11  오후 02:28    <DIR>          .p2
+2021-08-12  오전 09:35    <DIR>          .sts4
+2021-08-13  오전 10:34    <DIR>          .tooling
+2021-08-10  오후 09:55    <DIR>          .vscode
+2021-08-11  오전 02:00    <DIR>          3D Objects
+2021-08-17  오후 03:11           246,770 class.txt
+2021-08-11  오전 02:00    <DIR>          Contacts
+2021-08-13  오전 11:31    <DIR>          Documents
+2021-08-17  오전 01:23    <DIR>          Downloads
+2021-08-11  오후 02:29    <DIR>          eclipse-workspace
+2021-08-11  오전 02:00    <DIR>          Favorites
+2021-08-13  오전 10:34    <DIR>          hsperfdata_pc
+2021-08-17  오후 03:11           246,770 java.txt
+2021-08-12  오전 09:58               864 lab15.jar
+2021-08-12  오전 10:08           477,606 lab16.jar
+2021-08-12  오전 10:08    <DIR>          lab16_lib
+2021-08-11  오전 02:00    <DIR>          Links
+2021-08-11  오전 02:00    <DIR>          Music
+2021-08-17  오전 09:16    <DIR>          OneDrive
+2021-08-11  오전 02:00    <DIR>          Saved Games
+2021-08-11  오전 02:00    <DIR>          Searches
+2021-08-17  오후 03:13    <DIR>          test
+2021-08-17  오후 03:13    <DIR>          test1
+2021-08-17  오후 03:13    <DIR>          test2
+2021-08-17  오후 03:13    <DIR>          test3
+2021-08-11  오후 03:52    <DIR>          Videos
+               7개 파일             983,904 바이트
+              28개 디렉터리  51,804,893,184 바이트 남음
+
+C:\Users\pc>copy java.txt ..
+액세스가 거부되었습니다.
+        0개 파일이 복사되었습니다.
+
+C:\Users\pc>copy java.txt ../
+명령 구문이 올바르지 않습니다.
+
+C:\Users\pc>copy java.txt ..
+액세스가 거부되었습니다.
+        0개 파일이 복사되었습니다.
+
+C:\Users\pc>ren java.txt java1.txt
+
+C:\Users\pc>del *.txt
+
+C:\Users\pc>dir
+ C 드라이브의 볼륨에는 이름이 없습니다.
+ 볼륨 일련 번호: F481-FB64
+
+ C:\Users\pc 디렉터리
+
+2021-08-17  오후 03:34    <DIR>          .
+2021-08-17  오후 03:34    <DIR>          ..
+2021-08-17  오전 01:19            11,854 .bash_history
+2021-08-11  오후 01:55    <DIR>          .cache
+2021-08-16  오전 01:27    <DIR>          .config
+2021-08-11  오후 01:55    <DIR>          .eclipse
+2021-08-13  오전 01:29                40 .gitconfig
+2021-08-10  오후 10:08    <DIR>          .jupyter
+2021-08-16  오전 01:27                 0 .node_repl_history
+2021-08-11  오후 02:28    <DIR>          .p2
+2021-08-12  오전 09:35    <DIR>          .sts4
+2021-08-13  오전 10:34    <DIR>          .tooling
+2021-08-10  오후 09:55    <DIR>          .vscode
+2021-08-11  오전 02:00    <DIR>          3D Objects
+2021-08-11  오전 02:00    <DIR>          Contacts
+2021-08-13  오전 11:31    <DIR>          Documents
+2021-08-17  오전 01:23    <DIR>          Downloads
+2021-08-11  오후 02:29    <DIR>          eclipse-workspace
+2021-08-11  오전 02:00    <DIR>          Favorites
+2021-08-13  오전 10:34    <DIR>          hsperfdata_pc
+2021-08-12  오전 09:58               864 lab15.jar
+2021-08-12  오전 10:08           477,606 lab16.jar
+2021-08-12  오전 10:08    <DIR>          lab16_lib
+2021-08-11  오전 02:00    <DIR>          Links
+2021-08-11  오전 02:00    <DIR>          Music
+2021-08-17  오전 09:16    <DIR>          OneDrive
+2021-08-11  오전 02:00    <DIR>          Saved Games
+2021-08-11  오전 02:00    <DIR>          Searches
+2021-08-17  오후 03:13    <DIR>          test
+2021-08-17  오후 03:13    <DIR>          test1
+2021-08-17  오후 03:13    <DIR>          test2
+2021-08-17  오후 03:13    <DIR>          test3
+2021-08-11  오후 03:52    <DIR>          Videos
+               5개 파일             490,364 바이트
+              28개 디렉터리  51,804,114,944 바이트 남음
+
+C:\Users\pc>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>글수정</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="/js/board.js"></script>
+</head>
+<body>
+	<h1>글수정</h1>
+	<form action="/board/update" method="post" id="board">
+		<input type="hidden" name="boardNo" th:value="${board.boardNo}" id="boardNo" />
+		<table>
+			<tr>
+				<td>제목</td>
+				<td>
+					<input type="text" name="title" th:value="${board.title}" placeholder="제목" />
+				</td>
+			</tr>
+			<tr>
+				<td>작성자</td>
+				<td>
+					<input type="text" name="writer" th:value="${board.writer}" placeholder="작성자" />
+				</td>
+			</tr>
+			<tr>
+				<td>제목</td>
+				<td>
+					<textarea rows="20" cols="60" name="content" th:text="${board.content}"></textarea>
+				</td>
+			</tr>
+		</table>
+	</form>
+	<div>
+		<button type="button" id="btnUpdate">수정</button>
+		<button type="button" id="btnDelete">삭제</button>
+		<button type="button" id="btnList">목록</button>
+	</div>
+</body>
+</html>
